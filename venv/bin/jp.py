@@ -1,4 +1,4 @@
-#!/Users/declan/Documents/svl-eda-test/venv/bin/python3
+#!/Users/jangjisu/Documents/svl-eda-test/venv/bin/python3.13
 
 import sys
 import json

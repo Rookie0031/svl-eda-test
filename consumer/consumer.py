@@ -15,6 +15,11 @@ def receive_message():
         WaitTimeSeconds=5
     )
     messages = response.get('Messages', [])
+    
+    if not messages:
+        print("메시지가 없습니다.")
+        return
+    
     for message in messages:
         print("받은 메시지:", message['Body'])
         # 메시지 삭제 (중복 소비 방지)

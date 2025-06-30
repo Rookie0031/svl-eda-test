@@ -1,8 +1,10 @@
 ## 테스트 방법
 
-### 1. 실행
-- .env 파일 생성하고 SQS URL 추가
-- aws configure로 키 등록 
+### 1. 패키지 설치, 환경변수 설정 후 실행
+- python3 -m venv venv  
+- source venv/bin/activate && pip3 install -r requirements.txt
+- .env 파일 생성하고 환경변수로 QUEUE_URL 추가
+- aws configure로 키 등록 (sqs를 만든 aws key)
 
 ### 2. producer와 consumer 실행
 메시지를 만들고, 소비하는 구조
