@@ -7,7 +7,7 @@ load_dotenv()  # .env 파일 로드
 
 # SNS 클라이언트 생성
 sns = boto3.client('sns', region_name='ap-northeast-2')
-topic_arn = os.getenv('SNS_TOPIC_ARN')
+topic_arn = os.getenv('SNS_FIFO_TOPIC_ARN')
 
 def publish_message(message_body):
     response = sns.publish(

@@ -6,7 +6,7 @@ load_dotenv()  # .env 파일 로드
 
 # SQS 클라이언트 생성
 sqs = boto3.client('sqs', region_name='ap-northeast-2')
-queue_url = os.getenv('QUEUE_URL')
+queue_url = os.getenv('SQS_URL')
 
 def send_message(message_body):
     response = sqs.send_message(
